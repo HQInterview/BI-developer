@@ -14,6 +14,8 @@ The assignment is split into 3 parts:
 
 We expect you'll submit (1) and (3) to new separate public git repositories (i.e. GitHub) - more info below.
 
+Please use `Readme.md` file in each repository to give us more info re. how did you approach the problem, why did you chose the solution you implemented etc.
+
 ### 1. Data warehouse & ETL
 
 You can find these 3 tables in CSV files on AWS S3 (data storage):
@@ -32,12 +34,10 @@ Please download the 3 files and create a simple ETL & data mart.
 #### Data structure of `bi_data`
 
 
-
-
 #### How to submit?
 
 1. Create a new repository in GitHub, push the code and send us a link to the repository (see format below).
-2. Create a screenshot or two and send us with some comments - how does it work, what did you do and why.
+2. Write your notes to the `Readme.md` file in the repository.
 
 
 
@@ -75,7 +75,7 @@ JSON output:
 #### How to submit?
 
 1. Create a new repository in GitHub, push the code and send us a link to the repository.
-2. Create a screenshot or two and send us with some comments - how does it work, what did you do and why.
+2. Write your notes to the `Readme.md` file in the repository.
 
 
 ## Example output
@@ -89,11 +89,13 @@ This is the output we expect to get from you. But feel free to over-deliver!
 *It was lots of fun with the BI assignment and I'm happy I did it! The links are below:*
 
 1. *DataMart & ETL*
-	* URL to the repository: [http://www.github.com/example/repo2](http://www.github.com/example/repo2)
-2. *XXXXXXXXXXXXXX*
+	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
+	* More info with screenshots & comments: `Readme.md` in the repository
+2. *Fix and clean the data*
+	* 
 3. *API endpoint*
-	* URL to the repository: [http://www.github.com/example/repo2](http://www.github.com/example/repo2)
-	* *Screenshots & comments: Here's a screenshot of the API response (link). I did it in Python, coz I used to work with it a lot.*
+	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
+	* More info: `Readme.md` in the repository
 
 *Talk to you soon!*
 
@@ -104,4 +106,7 @@ This will be enough for our team to jump on and evaluate.
 Good luck! :-)
 
 ~HQ BI Team
+
+
+
 
