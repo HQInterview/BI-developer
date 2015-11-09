@@ -18,10 +18,9 @@ Please use `Readme.md` file in each repository to give us more info re. how did 
 
 You can find these 3 tables in CSV files on AWS S3 (data storage):
 
-* Table `offer`
-* Table `hotel`
-* Table `lst_currency`
-* ..........XXX
+* Table `offer` - offers from hotels
+* Table `lst_currency` - list of all supported currencies
+* Table `fx_rate` - currency exchange rates (rate from `prim_currency_id` to `scnd_currency_id`)
 
 Please download the 3 files and create a simple ETL & data mart.
 
@@ -40,13 +39,16 @@ Please download the 3 files and create a simple ETL & data mart.
 	* `currency_code` `VARCHAR(35)`
 	* `valid_from_date` `DATETIME`
 	* `valid_to_date` `DATETIME`
+* Table `hotel_offers` (includes info about each hotel, for each day and each our indicates if the hotel had at least one valid offer)
+	* `hotel_id` `INT`
+	* `date` `DATE`
+	* `hour` `TINYINT`
+	* `valid_offer_available_flag` `TINYINT`
 
 #### How to submit?
 
 1. Create a new repository in GitHub, push the code and send us a link to the repository (see format below).
 2. Write your notes to the `Readme.md` file in the repository.
-
-
 
 
 ### 3. API endpoint
@@ -63,9 +65,9 @@ Endpoint URL:
 
 Request parameters:
 
-* hotelId
-* checkinDate
-* checkoutDate
+* `hotelId`
+* `checkinDate`
+* `checkoutDate`
 
 JSON output:
 
