@@ -2,17 +2,15 @@
 
 The goal of this BI assignment is to find out if you could join our BI star-team to help us build a world-class data-driven startup.
 
-We expect you to have not just lots of experience with building a data warehouse, but also hand-on experience with programming in other languages such as Python, Go, Nodejs, or PHP.
+We expect you to have not just lots of experience with building a data warehouse, but also hands-on experience with software development in other languages such as Python, Go, Nodejs, or PHP.
 
 We will be evaluating the overall quality of your output, incl. the code quality & cleaness, SQL query optimisation, proper usage of a versioning tool and human-readable comments.
 
 The assignment is split into 3 parts:
 
-1. Data warehouse & ETL load
-2. Fix and clean the data
-3. API endpoint
-
-We expect you'll submit (1) and (3) to new separate public git repositories (i.e. GitHub) - more info below.
+1. **Data warehouse & ETL load** => submission to a new GitHub repository
+2. **Fix and clean the data** => submission via Evernote or whatever online note app
+3. **API endpoint** => submission to a new GitHub repository
 
 Please use `Readme.md` file in each repository to give us more info re. how did you approach the problem, why did you chose the solution you implemented etc.
 
@@ -20,8 +18,9 @@ Please use `Readme.md` file in each repository to give us more info re. how did 
 
 You can find these 3 tables in CSV files on AWS S3 (data storage):
 
-* offer 
-* hotel
+* Table `offer`
+* Table `hotel`
+* Table `lst_currency`
 * ..........XXX
 
 Please download the 3 files and create a simple ETL & data mart.
@@ -33,6 +32,14 @@ Please download the 3 files and create a simple ETL & data mart.
 
 #### Data structure of `bi_data`
 
+* Table `valid_offers` (includes only active offers - `offer`.`show_in_app_flag` = 1)
+	* `offer_id` `INT`
+	* `hotel_id` `INT`
+	* `hotel_name` `VARCHAR(255)`
+	* `price` `FLOAT`
+	* `currency_code` `VARCHAR(35)`
+	* `valid_from_date` `DATETIME`
+	* `valid_to_date` `DATETIME`
 
 #### How to submit?
 
