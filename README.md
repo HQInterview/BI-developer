@@ -33,7 +33,7 @@ Please download the 3 files and create a simple ETL & data mart.
 
 Please create new tables with the following structure. Add the SQL scripts to the repository.
 
-* Table `valid_offers` (includes only active offers - `offer`.`show_in_app_flag` = 1)
+* Table `valid_offers` (includes only active offers - `offer`.`valid_offer_flag` = 1)
 	* `offer_id` `INT`
 	* `hotel_id` `INT`
 	* `hotel_name` `VARCHAR(255)`
@@ -41,7 +41,7 @@ Please create new tables with the following structure. Add the SQL scripts to th
 	* `currency_code` `VARCHAR(35)`
 	* `valid_from_date` `DATETIME`
 	* `valid_to_date` `DATETIME`
-* Table `hotel_offers` (includes info about each hotel, for each day and each our indicates if the hotel had at least one valid offer)
+* Table `hotel_offers` (includes info about each hotel, for each day and each hour indicates if the hotel had at least one valid offer)
 	* `hotel_id` `INT`
 	* `date` `DATE`
 	* `hour` `TINYINT`
@@ -51,10 +51,19 @@ Please create new tables with the following structure. Add the SQL scripts to th
 
 Please create scripts or procedures to transform the data from `primary_data` to the new tables in `bi_data`. Include the scripts to the repository.
 
+The `valid_offers` table should show 
+
+The `hotel_offers` table should indicate for each hotel if the hotel had offers for each day and hour. The days & hours when the hotel was not available should have indication `valid_offer_available_flag = 0`.
+
 #### How to submit?
 
 1. Create a new repository in GitHub, push the code and send us a link to the repository (see format below).
 2. Write your notes to the `Readme.md` file in the repository.
+
+
+### 2. Fix and clean the data
+
+
 
 
 ### 3. API endpoint
@@ -110,7 +119,7 @@ This is the output we expect to get from you. But feel free to over-deliver!
 	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
 	* More info with screenshots & comments: See the `Readme.md` in the repository
 2. *Fix and clean the data*
-	* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	* 
 3. *API endpoint*
 	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
 	* More info: See the `Readme.md` in the repository
@@ -122,7 +131,6 @@ This is the output we expect to get from you. But feel free to over-deliver!
 This will be enough for our team to jump on and evaluate. 
 
 Good luck,
-
 *~Your BI Team*
 
 
