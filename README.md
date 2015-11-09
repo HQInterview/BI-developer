@@ -63,15 +63,15 @@ Please prepare a single API endpoint in whatever language you choose (Nodejs, PH
 
 The endpoint should expose some of the data from the newly created table `valid_offers` based on the request parameters. It should return a JSON response with the best deal (discount) for the hotel/checkin/checkout parameters. In other words - this API endpoint should return the offer with the best discount.
 
-Endpoint URL:
-
-* /offer/best-deal
-
-Request parameters:
+Request GET parameters:
 
 * `hotelId`
 * `checkinDate`
 * `checkoutDate`
+
+Endpoint `/offer/best-deal` with example GET params:
+
+* `/offer/best-deal?hotelId=1234&checkinDate=2015-11-11&checkoutDate=2015-11-12`
 
 JSON output:
 
@@ -90,6 +90,10 @@ JSON output:
 
 1. Create a new repository in GitHub, push the code and send us a link to the repository.
 2. Write your notes to the `Readme.md` file in the repository.
+
+If you host this project on some publicly available IP, please send us the URL.
+
+We should be able to run the project on localhost without any hassle (standard: no bugs, easy setup, documented Readme.md...).
 
 
 ## Example output
@@ -119,4 +123,7 @@ This will be enough for our team to jump on and evaluate.
 
 Good luck,
 *~Your BI Team*
+
+
+
 
