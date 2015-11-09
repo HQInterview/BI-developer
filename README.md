@@ -31,6 +31,8 @@ Please download the 3 files and create a simple ETL & data mart.
 
 #### Data structure of `bi_data`
 
+Please create new tables with the following structure. Add the SQL scripts to the repository.
+
 * Table `valid_offers` (includes only active offers - `offer`.`show_in_app_flag` = 1)
 	* `offer_id` `INT`
 	* `hotel_id` `INT`
@@ -45,6 +47,10 @@ Please download the 3 files and create a simple ETL & data mart.
 	* `hour` `TINYINT`
 	* `valid_offer_available_flag` `TINYINT`
 
+#### ETLs
+
+Please create scripts or procedures to transform the data from `primary_data` to the new tables in `bi_data`. Include the scripts to the repository.
+
 #### How to submit?
 
 1. Create a new repository in GitHub, push the code and send us a link to the repository (see format below).
@@ -55,13 +61,11 @@ Please download the 3 files and create a simple ETL & data mart.
 
 Please prepare a single API endpoint in whatever language you choose (Nodejs, PHP, Ruby, Python, ...). Pick a language you're most familiar with or the one you'd like to experiment with - in any case get ready for some follow-up questions.
 
-The endpoint should expose some of the data from the newly created table based on the request parameters. It should return a JSON response with the best (lowest) price matching the criteria. 
-
-For the purpose of this assignment **you don't need to take care of the currency exchange** - some prices will be in Thai Bath, some in USD... just return the lowest amount.
+The endpoint should expose some of the data from the newly created table `valid_offers` based on the request parameters. It should return a JSON response with the best deal (discount) for the hotel/checkin/checkout parameters. In other words - this API endpoint should return the offer with the best discount.
 
 Endpoint URL:
 
-* /offer
+* /offer/best-deal
 
 Request parameters:
 
@@ -73,7 +77,8 @@ JSON output:
 
 ```
 {
-	offerId: 12345567,
+	offerId: 12345678,
+	hotelId: 1234,
 	checkinDate: '2015-11-11',
 	checkoutDate: '2015-11-12',
 	sellingPrice: 234.34,
@@ -91,7 +96,7 @@ JSON output:
 
 This is the output we expect to get from you. But feel free to over-deliver!
 
-===== ===== ===== ===== ===== 
+*****
 
 *Dear BI Team,*
 
@@ -99,23 +104,19 @@ This is the output we expect to get from you. But feel free to over-deliver!
 
 1. *DataMart & ETL*
 	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
-	* More info with screenshots & comments: `Readme.md` in the repository
+	* More info with screenshots & comments: See the `Readme.md` in the repository
 2. *Fix and clean the data*
 	* 
 3. *API endpoint*
 	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
-	* More info: `Readme.md` in the repository
+	* More info: See the `Readme.md` in the repository
 
 *Talk to you soon!*
 
-===== ===== ===== ===== ===== 
+*****
 
 This will be enough for our team to jump on and evaluate. 
 
-Good luck! :-)
-
-~HQ BI Team
-
-
-
+Good luck,
+*~Your BI Team*
 
