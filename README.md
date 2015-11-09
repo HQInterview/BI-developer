@@ -110,7 +110,7 @@ This is the output we expect to get from you. But feel free to over-deliver!
 	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
 	* More info with screenshots & comments: See the `Readme.md` in the repository
 2. *Fix and clean the data*
-	* 
+	* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 3. *API endpoint*
 	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
 	* More info: See the `Readme.md` in the repository
@@ -122,6 +122,7 @@ This is the output we expect to get from you. But feel free to over-deliver!
 This will be enough for our team to jump on and evaluate. 
 
 Good luck,
+
 *~Your BI Team*
 
 
