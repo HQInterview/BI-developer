@@ -18,9 +18,9 @@ Please use `Readme.md` file in each repository to give us more info re. how did 
 
 You can find these 3 tables in CSV files on AWS S3 (data storage):
 
-* Table `offer` - offers from hotels
-* Table `lst_currency` - list of all supported currencies
-* Table `fx_rate` - currency exchange rates (rate from `prim_currency_id` to `scnd_currency_id`)
+* Table `offer` (download here) - offers from hotels
+* Table `lst_currency` ([download here](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/lst_currency.csv)) - list of all supported currencies
+* Table `fx_rate` ([download here](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/fx_rate.csv)) - currency exchange rates (rate from `prim_currency_id` to `scnd_currency_id`)
 
 Please download the 3 files and create a simple ETL & data mart.
 
