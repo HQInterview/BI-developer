@@ -18,9 +18,9 @@ Please use `Readme.md` file in each repository to give us more info re. how did 
 
 You can find these 3 tables in CSV files on AWS S3 (data storage):
 
-* Table `offer` (download here) - offers from hotels
-* Table `lst_currency` ([download here, 0.5 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/lst_currency.csv)) - list of all supported currencies
-* Table `fx_rate` ([download here, 3.8 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/fx_rate.csv)) - currency exchange rates (rate from `prim_currency_id` to `scnd_currency_id`)
+* Table `offer` (download here)
+* Table `lst_currency` ([download here, 0.5 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/lst_currency.csv))
+* Table `fx_rate` ([download here, 3.8 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/fx_rate.csv))
 
 Please download the 3 files and create a simple ETL & data mart.
 
@@ -30,9 +30,9 @@ Please download the 3 files and create a simple ETL & data mart.
 
 #### Mini-glossary
 
-* `offer` = deals that hotels give us
+* `offer` = deals that hotels give us (offers from hotels)
 * `lst_currency` = list of all supported currencies
-* `fx_rate` = foreign exchange rates
+* `fx_rate` = foreign exchange rates (currency exchange rates from `prim_currency_id` to `scnd_currency_id`)
 * `prim_currency_id` = primary currency ID (exchange *from* this currency)
 * `scnd_currency_id` = secondary currency ID (exchange *to* this currency)
 * `primary_data` = schema which includes the primary tables
