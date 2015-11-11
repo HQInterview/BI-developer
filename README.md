@@ -71,9 +71,9 @@ The `hotel_offers` table should indicate for each hotel if the hotel had offers 
 
 #### How to submit?
 
-1. Create a new repository in GitHub, push the code and send us a link to the repository (see format below).
+1. Create a new repository in GitHub
 2. Write your notes to the `Readme.md` file in the repository.
-
+3. Add the scripts to a sub-folder in the repository, push the code and send us a link to the repository
 
 ### 2. Data cleaning
 
@@ -116,8 +116,9 @@ JSON output:
 
 #### How to submit?
 
-1. Create a new repository in GitHub, push the code and send us a link to the repository.
+1. Create a new repository in GitHub
 2. Write your notes to the `Readme.md` file in the repository.
+3. Add the scripts to a sub-folder in the repository, push the code and send us a link to the repository
 
 If you host this project on some publicly available IP, please send us the URL.
 
