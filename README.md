@@ -9,7 +9,7 @@ We will be evaluating the overall quality of your output, incl. the code quality
 The assignment is split into 3 parts:
 
 1. **Data warehouse & ETL load** => submission to a new GitHub repository
-2. **Fix and clean the data** => submission to the same GitHub repo as (1), just another sub-folder
+2. **Data cleaning** => submission to the same GitHub repo as (1), just another sub-folder
 3. **API endpoint** => submission to a new GitHub repository
 
 Please use `Readme.md` file in each repository to give us more info re. how did you approach the problem, why did you chose the solution you implemented etc.
@@ -76,7 +76,7 @@ The `hotel_offers` table should indicate for each hotel if the hotel had offers 
 2. Write your notes to the `Readme.md` file in the repository.
 
 
-### 2. Fix and clean the data
+### 2. Data cleaning
 
 * **Problem:** There are ocassionaly problems with the underlying data, there could be a bug in the production system or some of the data are manually adjusted.
 * **Objective:** Create a system to identify the outliers.
@@ -138,7 +138,7 @@ This is the output we expect to get from you. But feel free to over-deliver!
 1. *DataMart & ETL*
 	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
 	* More info with screenshots & comments: See the `Readme.md` in the repository
-2. *Fix and clean the data*
+2. *Data cleaning*
 	* In the same repository as (1), please see sub-folder `/data-cleaning`
 		* Files: `/data-cleaning/cleaning-procedure.sql` and `/data-cleaning/Readme.md`
 3. *API endpoint*
@@ -152,8 +152,6 @@ This is the output we expect to get from you. But feel free to over-deliver!
 This will be enough for our team to jump on and evaluate. 
 
 Good luck,
+
 *~Your BI Team*
-
-
-
 
