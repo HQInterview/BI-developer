@@ -9,7 +9,7 @@ We will be evaluating the overall quality of your output, incl. the code quality
 The assignment is split into 3 parts:
 
 1. **Data warehouse & ETL load** => submission to a new GitHub repository
-2. **Fix and clean the data** => submission via Evernote or whatever online note app
+2. **Fix and clean the data** => submission to the same GitHub repo as (1), just another sub-folder
 3. **API endpoint** => submission to a new GitHub repository
 
 Please use `Readme.md` file in each repository to give us more info re. how did you approach the problem, why did you chose the solution you implemented etc.
@@ -139,7 +139,8 @@ This is the output we expect to get from you. But feel free to over-deliver!
 	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
 	* More info with screenshots & comments: See the `Readme.md` in the repository
 2. *Fix and clean the data*
-	* 
+	* In the same repository as (1), please see sub-folder `/data-cleaning`
+		* Files: `/data-cleaning/cleaning-procedure.sql` and `/data-cleaning/Readme.md`
 3. *API endpoint*
 	* URL to the repository: [GitHub link](http://www.github.com/example/repo2)
 	* More info: See the `Readme.md` in the repository
