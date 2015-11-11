@@ -22,21 +22,13 @@ You can find these 3 tables in CSV files on AWS S3 (data storage):
 * Table `lst_currency` ([download here, 0.5 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/lst_currency.csv))
 * Table `fx_rate` ([download here, 3.8 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/fx_rate.csv))
 
-Please download the 3 files and create a simple ETL & data mart.
+Please download the 3 files and create simple ETL scripts & a data-mart.
 
-1. Create a new MySQL database & load the 3 tables (above) 1:1 to a new schema: `primary_data`
-2. Create new schema: `bi_data` with the structure below
-2. Create an ETL process to extract, transform and load the data from `primary_data` schema to `bi_data` schema
-
-#### Mini-glossary
-
-* `offer` = deals that hotels give us (offers from hotels)
-* `lst_currency` = list of all supported currencies
-* `fx_rate` = foreign exchange rates (currency exchange rates from `prim_currency_id` to `scnd_currency_id`)
-* `prim_currency_id` = primary currency ID (exchange *from* this currency)
-* `scnd_currency_id` = secondary currency ID (exchange *to* this currency)
-* `primary_data` = schema which includes the primary tables
-* `bi_data` = schema which includes the tables for the BI team
+1. Create a new MySQL / PostgreSQL database
+2. Create a new schema: `primary_data`
+2. Load the 3 tables (above) 1:1 to the `primary_data` schema
+2. Create a new schema: `bi_data` (see the structure below)
+2. Create ETL scripts to extract, transform and load the data from `primary_data` schema to `bi_data` schema
 
 #### Data structure of `bi_data`
 
@@ -56,9 +48,15 @@ Please create new tables with the following structure. Add the SQL scripts to th
 	* `date` `DATE`
 	* `hour` `TINYINT`
 	* `valid_offer_available_flag` `TINYINT`
-
 #### Mini-glossary
 
+* `offer` = deals that hotels give us (offers from hotels)
+* `lst_currency` = list of all supported currencies
+* `fx_rate` = foreign exchange rates (currency exchange rates from `prim_currency_id` to `scnd_currency_id`)
+* `prim_currency_id` = primary currency ID (exchange *from* this currency)
+* `scnd_currency_id` = secondary currency ID (exchange *to* this currency)
+* `primary_data` = schema which includes the primary tables
+* `bi_data` = schema which includes the tables for the BI team
 * `valid_offer_available_flag` = indication if a hotel has a valid offer during the specified period (at least 1 minute within the 1 hour)
 * `price_isd` = the `original_price` converted to USD
 
@@ -79,7 +77,7 @@ The `hotel_offers` table should indicate for each hotel if the hotel had offers 
 ### 2. Data cleaning
 
 * **Problem:** There are ocassionaly problems with the underlying data, there could be a bug in the production system or some of the data are manually adjusted.
-* **Objective:** Create a system to identify the outliers.
+* **Your objective:** Create a system to identify the outliers.
 	* Create a new folder in the GitHub repository `data-cleaning`
 	* Explain in a `/data-cleaning/Readme.md` file how would you design such a system, how could it run autonomously
 	* Create a simple stored procedure to identify these outliers (no need to setup the whole autonomous system). The name & functionality of the stored procedure is up to you.
