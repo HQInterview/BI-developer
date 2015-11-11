@@ -48,6 +48,7 @@ Please create new tables with the following structure. Add the SQL scripts to th
 	* `date` `DATE`
 	* `hour` `TINYINT`
 	* `valid_offer_available_flag` `TINYINT`
+
 #### Mini-glossary
 
 * `offer` = deals that hotels give us (offers from hotels)
