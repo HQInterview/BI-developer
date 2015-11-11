@@ -28,6 +28,15 @@ Please download the 3 files and create a simple ETL & data mart.
 2. Create new schema: `bi_data` with the structure below
 2. Create an ETL process to extract, transform and load the data from `primary_data` schema to `bi_data` schema
 
+#### Mini-glossary
+
+* `offer` = deals that hotels give us
+* `lst_currency` = list of all supported currencies
+* `fx_rate` = foreign exchange rates
+* `prim_currency_id` = primary currency ID (exchange *from* this currency)
+* `scnd_currency_id` = secondary currency ID (exchange *to* this currency)
+* `primary_data` = schema which includes the primary tables
+* `bi_data` = schema which includes the tables for the BI team
 
 #### Data structure of `bi_data`
 
@@ -37,8 +46,9 @@ Please create new tables with the following structure. Add the SQL scripts to th
 	* `offer_id` `INT`
 	* `hotel_id` `INT`
 	* `hotel_name` `VARCHAR(255)`
-	* `price` `FLOAT`
-	* `currency_code` `VARCHAR(35)`
+	* `price_usd` `FLOAT`
+	* `original_price` `FLOAT`
+	* `original_currency_code` `VARCHAR(35)`
 	* `valid_from_date` `DATETIME`
 	* `valid_to_date` `DATETIME`
 * Table `hotel_offers` (includes info about each hotel, for each day and each hour indicates if the hotel had at least one valid offer)
@@ -47,11 +57,16 @@ Please create new tables with the following structure. Add the SQL scripts to th
 	* `hour` `TINYINT`
 	* `valid_offer_available_flag` `TINYINT`
 
+#### Mini-glossary
+
+* `valid_offer_available_flag` = indication if a hotel has a valid offer during the specified period (at least 1 minute within the 1 hour)
+* `price_isd` = the `original_price` converted to USD
+
 #### ETLs
 
 Please create scripts or procedures to transform the data from `primary_data` to the new tables in `bi_data`. Include the scripts to the repository.
 
-The `valid_offers` table should show 
+The `valid_offers` table should show only valid offers with price converted to USD.
 
 The `hotel_offers` table should indicate for each hotel if the hotel had offers for each day and hour. The days & hours when the hotel was not available should have indication `valid_offer_available_flag = 0`.
 
@@ -63,12 +78,17 @@ The `hotel_offers` table should indicate for each hotel if the hotel had offers 
 
 ### 2. Fix and clean the data
 
-
-
+* **Problem:** There are ocassionaly problems with the underlying data, there could be a bug in the production system or some of the data are manually adjusted.
+* **Objective:** Create a system to identify the outliers.
+	* Create a new folder in the GitHub repository `data-cleaning`
+	* Explain in a `/data-cleaning/Readme.md` file how would you design such a system, how could it run autonomously
+	* Create a simple stored procedure to identify these outliers (no need to setup the whole autonomous system). The name & functionality of the stored procedure is up to you.
+	* Add the procedure to a new file `/data-cleaning/cleaning-procedure.sql`
+	* Explain in the `/data-cleaning/Readme.md` file which outliers has the procedure been able to identify (just enumerate in bullet points)
 
 ### 3. API endpoint
 
-Please prepare a single API endpoint in whatever language you choose (Nodejs, PHP, Ruby, Python, ...). Pick a language you're most familiar with or the one you'd like to experiment with - in any case get ready for some follow-up questions.
+Please prepare a single API endpoint in whatever language you chose (Nodejs, PHP, Ruby, Python, ...). Pick a language you're most familiar with or the one you'd like to experiment with - in any case get ready for some follow-up questions.
 
 The endpoint should expose some of the data from the newly created table `valid_offers` based on the request parameters. It should return a JSON response with the best deal (discount) for the hotel/checkin/checkout parameters. In other words - this API endpoint should return the offer with the best discount.
 
