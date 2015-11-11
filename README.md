@@ -18,7 +18,7 @@ Please use `Readme.md` file in each repository to give us more info re. how did 
 
 You can find these 3 tables in CSV files on AWS S3 (data storage):
 
-* Table `offer` (download here)
+* Table `offer` ([download here](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/offer.csv))
 * Table `lst_currency` ([download here, 0.5 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/lst_currency.csv))
 * Table `fx_rate` ([download here, 3.8 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/fx_rate.csv))
 
