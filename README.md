@@ -9,7 +9,7 @@ We will be evaluating the overall quality of your output, incl. the code quality
 The assignment is split into 3 parts:
 
 1. **Data warehouse & ETL load** => submission to a new GitHub repository
-2. **Data cleaning** => submission to the same GitHub repo as (1), just another sub-folder
+2. **Data cleaning** => submission to the same GitHub repository as (1), just another sub-folder
 3. **API endpoint** => submission to a new GitHub repository
 
 Please use `Readme.md` file in each repository to give us more info re. how did you approach the problem, why did you chose the solution you implemented etc.
@@ -26,15 +26,15 @@ Please download the 3 files and create simple ETL scripts & a data-mart.
 
 1. Create a new MySQL / PostgreSQL database
 2. Create a new schema: `primary_data`
-2. Load the 3 tables (above) 1:1 to the `primary_data` schema
+2. Load the 3 tables (above) 1:1 to the `primary_data` schema (structure same as the CSV files have)
 2. Create a new schema: `bi_data` (see the structure below)
-2. Create ETL scripts to extract, transform and load the data from `primary_data` schema to `bi_data` schema
+2. Create ETL scripts to extract, transform and load the data from the `primary_data` schema to the `bi_data` schema
 
 #### Data structure of `bi_data`
 
 Please create new tables with the following structure. Add the SQL scripts to the repository.
 
-* Table `valid_offers` (includes only active offers - `offer`.`valid_offer_flag` = 1)
+* Table `valid_offers` - should include only active offers - `offer`.`valid_offer_flag` = 1
 	* `offer_id` `INT`
 	* `hotel_id` `INT`
 	* `hotel_name` `VARCHAR(255)`
@@ -43,7 +43,7 @@ Please create new tables with the following structure. Add the SQL scripts to th
 	* `original_currency_code` `VARCHAR(35)`
 	* `valid_from_date` `DATETIME`
 	* `valid_to_date` `DATETIME`
-* Table `hotel_offers` (includes info about each hotel, for each day and each hour indicates if the hotel had at least one valid offer)
+* Table `hotel_offers` - should include info about each hotel, for each day and each hour indicates if the hotel had at least one valid offer
 	* `hotel_id` `INT`
 	* `date` `DATE`
 	* `hour` `TINYINT`
@@ -81,7 +81,7 @@ The `hotel_offers` table should indicate for each hotel if the hotel had offers 
 * **Your objective:** Create a system to identify the outliers.
 	* Create a new folder in the GitHub repository `data-cleaning`
 	* Explain in a `/data-cleaning/Readme.md` file how would you design such a system, how could it run autonomously
-	* Create a simple stored procedure to identify these outliers (no need to setup the whole autonomous system). The name & functionality of the stored procedure is up to you.
+	* Create a simple stored procedure to identify these outliers. No need to setup the whole autonomous system, just write the stored procedure. The name & functionality of the procedure is up to you.
 	* Add the procedure to a new file `/data-cleaning/cleaning-procedure.sql`
 	* Explain in the `/data-cleaning/Readme.md` file which outliers has the procedure been able to identify (just enumerate in bullet points)
 
@@ -97,11 +97,11 @@ Request GET parameters:
 * `checkinDate`
 * `checkoutDate`
 
-Endpoint `/offer/best-deal` with example GET params:
+Create an endpoint `/offer/best-deal` with example GET params:
 
 * `/offer/best-deal?hotelId=1234&checkinDate=2015-11-11&checkoutDate=2015-11-12`
 
-JSON output:
+JSON output which your new endpoint should return:
 
 ```
 {
@@ -122,7 +122,7 @@ JSON output:
 
 If you host this project on some publicly available IP, please send us the URL.
 
-We should be able to run the project on localhost without any hassle (standard: no bugs, easy setup, documented Readme.md...).
+We should be able to run the project on localhost without any hassle (expectations: no bugs, easy setup, well documented `Readme.md`...).
 
 
 ## Example output
