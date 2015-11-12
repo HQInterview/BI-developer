@@ -24,11 +24,15 @@ You can find these 3 tables in CSV files on AWS S3 (data storage):
 
 Please download the 3 files and create simple ETL scripts & a data-mart.
 
-1. Create a new MySQL / PostgreSQL database
+1. Create a new database
 2. Create a new schema: `primary_data`
 2. Load the 3 tables (above) 1:1 to the `primary_data` schema (structure same as the CSV files have)
 2. Create a new schema: `bi_data` (see the structure below)
 2. Create ETL scripts to extract, transform and load the data from the `primary_data` schema to the `bi_data` schema
+
+#### Stack
+
+At HotelQuickly we use **MySQL, PosgreSQL (AWS Redshift) and MongoDB** databases. Thus we suggest you create the database in either **MySQL or PostgreSQL.** Both are open-source and easy to install for those few of you who don't have it yet. If you're more familiar with i.e. Oracle or MS SQL and prefer to use these, we're fine with that.
 
 #### Data structure of `bi_data`
 
