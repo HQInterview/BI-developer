@@ -41,12 +41,14 @@ Please create new tables with the following structure. Add the SQL scripts to th
 	* `price_usd` `FLOAT`
 	* `original_price` `FLOAT`
 	* `original_currency_code` `VARCHAR(35)`
+	* `breakfast_included_flag` `TINYINT`
 	* `valid_from_date` `DATETIME`
 	* `valid_to_date` `DATETIME`
 * Table `hotel_offers` - should include info about each hotel, for each day and each hour indicates if the hotel had at least one valid offer
 	* `hotel_id` `INT`
 	* `date` `DATE`
 	* `hour` `TINYINT`
+	* `breakfast_included_flag` `TINYINT`
 	* `valid_offer_available_flag` `TINYINT`
 
 #### Mini-glossary
@@ -60,6 +62,7 @@ Please create new tables with the following structure. Add the SQL scripts to th
 * `bi_data` = schema which includes the tables for the BI team
 * `valid_offer_available_flag` = indication if a hotel has a valid offer during the specified period (at least 1 minute within the 1 hour)
 * `price_isd` = the `original_price` converted to USD
+* `valid_from_date` / `valid_to_date` = indication of time date&time when the offer became active / inactive. Please note the offers cannot overlap for one hotel with the same parameters (checkin, checkout, source, breakfast)
 
 #### ETLs
 
