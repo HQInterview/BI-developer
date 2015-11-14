@@ -19,8 +19,29 @@ Please use `Readme.md` file in each repository to give us more info re. how did 
 You can find these 3 tables in CSV files on AWS S3 (data storage):
 
 * Table `offer` ([download here, 777 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/offer.csv))
+	* `id`
+	* `hotel_id`
+	* `currency_id`
+	* `source_system_code` (inventory source system)
+	* `available_cnt` (Number of rooms available)
+	* `sellings_price`
+	* `checkin_date`
+	* `checkout_date`
+	* `valid_offer_flag` (indication if the offer is valid or not)
+	* `offer_valid_from` (datetime)
+	* `offer_valid_to` (datetime)
+	* `breakfast_included_flag` (indication if the breakfast is included in the price)
+	* `insert_datetime` (datetime when the row was inserted to the database)
 * Table `lst_currency` ([download here, 0.5 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/lst_currency.csv))
+	* `id`
+	* `code`
+	* `name`
 * Table `fx_rate` ([download here, 3.8 MB](https://s3-ap-southeast-2.amazonaws.com/hq-bi/bi-assignment/fx_rate.csv))
+	* `id`
+	* `prim_currency_id`
+	* `scnd_currency_id`
+	* `date`
+	* `currency_rate`
 
 Please download the 3 files and create simple ETL scripts & a data-mart.
 
