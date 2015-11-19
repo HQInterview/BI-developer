@@ -62,7 +62,6 @@ Please create new tables with the following structure. Add the SQL scripts to th
 * Table `valid_offers` - should include only active offers - `offer`.`valid_offer_flag` = 1
 	* `offer_id` `INT`
 	* `hotel_id` `INT`
-	* `hotel_name` `VARCHAR(255)`
 	* `price_usd` `FLOAT`
 	* `original_price` `FLOAT`
 	* `original_currency_code` `VARCHAR(35)`
